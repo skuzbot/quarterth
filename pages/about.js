@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Layout from '../components/layout.js'
 
 const About = (props) => {
   return (
-    <div>TODO about.js</div>
+    <Layout>
+      <p>About</p>
+    </Layout>
   )
 }
 
