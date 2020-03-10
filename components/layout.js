@@ -1,32 +1,28 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import Header from './header.js'
 
-const layoutStyle = {
-  dislpay: 'flex',
-  flexDirection: 'column',
-  background: 'gray',
-  padding: '1rem',
-  margin: '1rem',
-  height: '80vh'
-}
+const LayoutStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
-const childCont = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: '#6b84d1',
-  color: '#FFF'
-}
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+`
 
 const Layout = (props) => {
   return (
-      <div style={layoutStyle}>
-        <Header />
-        <div style={childCont}>
-          {props.children}
-        </div>
-      </div>
+    <LayoutStyle>
+      <Header />
+      <Content>
+        {props.children}
+      </Content>
+    </LayoutStyle>
   )
 }
 
